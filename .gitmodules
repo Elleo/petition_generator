@@ -1,0 +1,3 @@
+[submodule "uk_petitions_data"]
+	path = uk_petitions_data
+	url = git@github.com:Jonty/uk_petitions_data.git
