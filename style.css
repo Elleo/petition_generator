@@ -9,8 +9,7 @@
 }
 
 body {
-    background: #fff;
-    color: #0b0c0c;
+    background-color: #dee0e2;
     line-height: 1.5;
     font-weight: 400;
     -webkit-font-smoothing: antialiased;
@@ -30,7 +29,23 @@ h1 {
     margin: 0 auto;
     max-width: 630px;
     padding-bottom: 60px;
-    margin-top: 2em;
+}
+
+#footer {
+    border-top: 10px solid #080;
+    background-color: #dee0e2;
+    padding-top: 30px;
+    padding-bottom: 45px;
+}
+
+#footer a {
+    text-decoration: none;
+    color: #559;
+}
+
+#main {
+    padding-top: 2em;
+    background-color: #fff;
 }
 
 #global-header {
@@ -74,4 +89,15 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 
 #global-header a {
     text-decoration: none;
+}
+
+#icon {
+    float: left;
+    padding-right: 1em;
+    padding-top: 0.25em;
+}
+
+#icon img {
+    width: 48px;
+    height: 48px;
 }
