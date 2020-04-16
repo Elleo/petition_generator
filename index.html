@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+  <head>
+    <title>GPT2 Petitions</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width = device-width" />
+    <meta name="theme-color" content="#080">
+	<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet"> 
+	<link href="style.css" rel="stylesheet">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.0.min.js"></script>
+    <script type="text/javascript">
+        function populate() {
+            $.getJSON("pregenerated.json", function(petitions) {
+                let id = Math.floor(Math.random() * petitions.length);
+                let petition = petitions[id];
+                $("#title").html(petition.title);
+                $("#text").html(petition.body);
+            });
+        }
+    </script>
+  </head>
+  <body onload="populate();">
+    <header role="banner" id="global-header">
+      <div class="wrapper">
+        <a href='#' class="proposition"><span class="graphic graphic-portcullis-white"></span>GPT2 Petitions</a>
+        <p class="strapline">The policies you deserve</p>
+      </div>
+    </header>
+
+    <div id="content">
+      <h1 id="title"></h1>
+      <div id="text"></div>
+    </div>
+  </body>
+</html>
