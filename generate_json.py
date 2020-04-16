@@ -4,7 +4,6 @@ import json
 
 pregenerated = open('pregenerated.json', 'r')
 entries = json.load(pregenerated)
-print(entries)
 pregenerated.close()
 
 sess = gpt2.start_tf_sess()
@@ -14,7 +13,7 @@ petitions = gpt2.generate(sess, prefix="<|startofpetition|>", truncate="<|endofp
 
 for petition in petitions:
     petition = petition.replace("<|startofpetition|>", "") # Sometimes this gets duplicated
-    petition.replace("Reason for rejection:", "<strong>Why was this petition rejected?</strong>")
+    petition = petition.replace("Reason for rejection:", "<strong>Why was this petition rejected?</strong>")
     lines = petition.split("\n")
     if lines[0].strip() == "":
         start = 1
