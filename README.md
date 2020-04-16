@@ -19,3 +19,7 @@ The `generate_json.py` script can be used to add additional entries to the `preg
 To train the model ensure you've checked out the `uk_petitions_data` submodule by running `git submodule update --init`
 
 Then just run `./train.py`
+
+## HTML viewer
+
+To use the HTML viewer locally you'll need to start a HTTP server. This can be done by running `python3 -m http.server` in the `petition_generator` directory. The viewer will then be accessible at http://localhost:8000
