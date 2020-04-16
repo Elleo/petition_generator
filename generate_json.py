@@ -13,7 +13,7 @@ petitions = gpt2.generate(sess, prefix="<|startofpetition|>", truncate="<|endofp
 
 for petition in petitions:
     petition = petition.replace("<|startofpetition|>", "") # Sometimes this gets duplicated
-    petition = petition.replace("Reason for rejection:", "<strong>Why was this petition rejected?</strong>")
+    petition = petition.replace("Reason for rejection:", "<h2>Why was this petition rejected?</h2>")
     lines = petition.split("\n")
     if lines[0].strip() == "":
         start = 1

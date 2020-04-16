@@ -101,3 +101,9 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     width: 48px;
     height: 48px;
 }
+
+h2 {
+    font-weight: 700;
+    font-size: 24px;
+    margin-bottom: -1em;
+}
