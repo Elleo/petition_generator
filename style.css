@@ -38,9 +38,18 @@ h1 {
     padding-bottom: 45px;
 }
 
-#footer a {
+#footer a, #reload a {
     text-decoration: none;
     color: #559;
+}
+
+#footer a:hover, #reload a:hover {
+    text-decoration: underline;
+}
+
+#reload {
+    width: 100%;
+    text-align: center;
 }
 
 #main {
