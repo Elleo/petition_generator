@@ -9,21 +9,38 @@
 	<link href="style.css" rel="stylesheet">
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.0.min.js"></script>
     <script type="text/javascript">
-        function populate() {
-            $.getJSON("pregenerated.json", function(petitions) {
-                let id = Math.floor(Math.random() * petitions.length);
-                let petition = petitions[id];
-                $("#title").html(petition.title);
-                $("#text").html(petition.body);
+        var petitions = [];
+        var id;
+
+        function load() {
+            id = window.location.hash.substr(1);
+            $.getJSON("pregenerated.json", function(data) {
+                petitions = data;
+                if (id == "") {
+                    id = Math.floor(Math.random() * petitions.length);
+                }
+                populate();
             });
+        }
+
+        function random() {
+            id = Math.floor(Math.random() * petitions.length);
+            populate();
+        }
+
+        function populate() {
+            let petition = petitions[id];
+            $("#title").html(petition.title);
+            $("#text").html(petition.body);
+            window.location.hash = id;
         }
     </script>
   </head>
-  <body onload="populate();">
+  <body onload="load();">
     <header role="banner" id="global-header">
       <div class="wrapper">
         <div id='icon'><img src='icon.svg' /></div>
-        <a href='#' class="proposition" onclick='populate();'><span class="graphic graphic-portcullis-white"></span>GPT2 Petitions</a>
+        <a href='#' class="proposition" onclick='random(); event.preventDefault();'><span class="graphic graphic-portcullis-white"></span>GPT2 Petitions</a>
         <p class="strapline">The policies you deserve</p>
       </div>
     </header>
@@ -33,7 +50,7 @@
         <div id="text"></div>
         <br /><br />
         <div id='reload'>
-            <a href='#' onclick='populate();'>Generate another</a>
+            <a href='#' onclick='random(); event.preventDefault();'>Generate another</a>
         </div>
         <br />
       </div>
