@@ -1,5 +1,9 @@
 # Petition Generator
 
+<p align="center">
+  <img width="460" height="300" src="https://github.com/elleo/petition_generator/raw/master/src/example.png" alt="Example output" title="Example output">
+</p>
+
 A silly project to generate UK government style petitions via a GPT-2 transformer.
 
 You can view the generated petitions here: https://elleo.github.io/petition_generator/
