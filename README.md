@@ -10,7 +10,7 @@ You can view the generated petitions here: https://elleo.github.io/petition_gene
 
 ## Generating output
 
-To generate your own output you can download a checkpoint from the releases section and unpack it in the project directory, or train yourself (see below)
+To generate your own output you can download a pretrained checkpoint from the [releases section](https://github.com/Elleo/petition_generator/releases) and unpack it in the project directory, or train yourself (see below)
 
 Install the requirements by running `pip3 install -r requirements.txt`
 
