@@ -1,0 +1,6 @@
+build:
+    gpu: true
+    python_version: "3.8"
+    python_packages:
+         - "gpt2-client==2.1.5"
+predict: "predict.py:Predictor"
